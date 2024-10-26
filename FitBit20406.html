@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrate FitBit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: blue;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            background-color: purple;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 10px solid black;
+        }
+        .outcome {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="triangle-container">
+    <div class="triangle"></div>
+</div>
+   <style>
+        .triangle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid black; /* Bottom color: Black */
+            position: relative;
+        }
+        .triangle::before {
+            content: "";
+            position: absolute;
+            top: -80px; /* Position above the black triangle */
+            left: -50px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 80px solid purple; /* Middle color: Purple */
+        }
+        .triangle::after {
+            content: "";
+            position: absolute;
+            top: -140px; /* Position above the purple triangle */
+            left: -50px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 60px solid blue; /* Top color: Blue */
+        }
+    </style>
+</head>
+<h1>Integrate FitBit</h1>
+<p id="story">For powers like Teleportation, Telekinesis, <span title="Objects appear out of nothing thin air">Materialise, </span>Shapeshifting, and Invincibility</p>
+<h3>Decide</h3>
+
+<button class="button" id="intuitionBtn">Integrate FitBit Company</button>
+<button class="button" id="telekinesisBtn">Open a Factory</button>
+
+<div class="outcome" id="outcome"></div>
+
+<script>
+    const storyElement = document.getElementById('story');
+    const outcomeElement = document.getElementById('outcome');
+
+    document.getElementById('intuitionBtn').onclick = function() {
+        storyElement.textContent = "FitBit integration has begun manifesting.";
+        outcomeElement.textContent = "Outcome: The company FitBit starts working on special paranormal abilities aids.";
+    };
+
+    document.getElementById('telekinesisBtn').onclick = function() {
+        storyElement.textContent = "Manifesting: You start an manufacturing company (quantum leap).";
+        outcomeElement.textContent = "Outcome: You start a company to manufacture devices for the paranormal abilities market.";
+    };
+</script>
+
+</body>
+</html>
