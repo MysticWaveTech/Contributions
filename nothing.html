@@ -66,6 +66,7 @@
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
+            margin-bottom: 10px; /* Added margin for spacing */
         }
         button:hover {
             background-color: #00cc77;
@@ -137,6 +138,9 @@
     </div>
 
     <div id="feedback" class="feedback"></div>
+
+    <!-- Clear Values Button -->
+    <button onclick="clearValues()" style="max-width: 15%; heught: 15px; background-color: brown;">Clear Values</button>
 </div>
 
 <script>
@@ -188,6 +192,22 @@
         setTimeout(() => {
             feedback.innerText = "Your intention has begun to manifest. Stay disciplined and focus on your visualization daily.";
         }, 1000);
+    }
+
+    // Function to clear values
+    function clearValues() {
+        localStorage.removeItem('customerName');
+        localStorage.removeItem('customerPhoto');
+        document.getElementById('customer-name').innerText = "Customer Name";
+        document.getElementById('name').value = '';
+        document.getElementById('profile-pic').src = "https://via.placeholder.com/60";
+        document.getElementById('intent').value = '';
+        document.getElementById('clarity').value = 50;
+        document.getElementById('emotion').value = 50;
+        document.getElementById('belief').value = 50;
+        document.getElementById('duration').selectedIndex = 0;
+        document.getElementById('progress-bar').style.width = '0%';
+        document.getElementById('feedback').innerText = '';
     }
 </script>
 
